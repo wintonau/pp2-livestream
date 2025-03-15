@@ -1,0 +1,5 @@
+kubectl get svc
+
+cd C:\Users\winto\OneDrive\myProgGitLab\pp2-livestream
+kubectl apply -f pp2-livestream-deployment.yaml
+kubectl apply -f pp2-livestream-service.yaml
