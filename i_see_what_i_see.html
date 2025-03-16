@@ -10,7 +10,7 @@
     <script>
         const localVideo = document.getElementById('localVideo');
         const remoteVideo = document.getElementById('remoteVideo');
-        const socket = io('http://<external-ip>:8080');
+        const socket = io('ws://20.255.113.81:8080/ws');
 
         navigator.mediaDevices.getUserMedia({ video: true, audio: true })
             .then((stream) => {
