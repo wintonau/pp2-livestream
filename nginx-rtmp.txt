@@ -1,0 +1,2 @@
+cd C:\Users\winto\OneDrive\myProgGitLab\pp2-livestream
+kubectl apply -f nginx-rtmp-deployment.yaml

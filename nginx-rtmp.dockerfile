@@ -1,3 +1,0 @@
-FROM alfg/nginx-rtmp
-EXPOSE 1935
-EXPOSE 80

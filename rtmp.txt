@@ -1,0 +1,18 @@
+cd C:\Users\winto\OneDrive\myProgGitLab\pp2-livestream
+
+
+kubectl apply -f live-deployment.yaml
+kubectl apply -f live-service.yaml
+kubectl get svc live-streaming
+
+
+live-streaming   LoadBalancer   10.0.47.116   20.255.123.28   1935:30999/TCP,80:31811/TCP   21s
+
+Use an RTMP client (e.g., OBS Studio) to stream live video to the server:
+rtmp://20.255.123.28/live/stream
+
+Use an HLS-compatible player (e.g., VLC) to play the live stream:
+http://20.255.123.28/hls/stream.m3u8
+
+
+

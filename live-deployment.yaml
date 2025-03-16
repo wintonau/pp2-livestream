@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: live-streaming
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: live-streaming
+  template:
+    metadata:
+      labels:
+        app: live-streaming
+    spec:
+      containers:
+      - name: live-streaming
+        image: acrapp1m1a.azurecr.io/live-streaming:latest
+        ports:
+        - containerPort: 1935  # RTMP port
+        - containerPort: 80    # HTTP port for HLS
+        volumeMounts:
+        - name: hls-volume
+          mountPath: /tmp/hls
+      volumes:
+      - name: hls-volume
+        emptyDir: {}
